@@ -21,7 +21,6 @@ except ImportError:
 init(autoreset=True)
 
 def print_banner():
-    """Prints the cool welcome banner with the GitHub link."""
     os.system('cls' if os.name == 'nt' else 'clear')
     banner = f"""
 {Fore.CYAN}  __      __   _____   ____   _   _   _   _ 
@@ -39,7 +38,6 @@ def print_banner():
     print(f"{Fore.YELLOW}========================================================\n")
 
 def get_format_choice():
-    """Displays the menu and gets the format choice from the user."""
     print(f"{Fore.CYAN}Choose the format of your list file:")
     print(f"{Fore.WHITE}1. url#username@password")
     print(f"{Fore.WHITE}2. url;username;password")
@@ -69,7 +67,6 @@ def get_format_choice():
     return delim_type, delim1, delim2
 
 def check_login(line, delim_type, delim1, delim2=None):
-    """The core function to check logins, using the chosen delimiter."""
     line = line.strip()
     if not line or line.startswith('#'):
         return None
