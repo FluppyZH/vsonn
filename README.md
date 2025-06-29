@@ -1,2 +1,2 @@
 # how to use :
-1. brain
+1. u must have brain
